@@ -24,7 +24,7 @@ func max(a, b int) int {
 func allPrimesUpTo(n int) []int {
 	answer := []int{2}
 	for i := 3; i <= n; i++ {
-		if common.IsPrime(i) {
+		if common.IsPrime(int64(i)) {
 			answer = append(answer, i)
 		}
 	}

@@ -9,7 +9,7 @@ func main() {
 	n := 1
 	index := 0
 	for {
-		if common.IsPrime(n) {
+		if common.IsPrime(int64(n)) {
 			index++
 		}
 		if index == 10001 {
