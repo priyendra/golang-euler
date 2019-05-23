@@ -2,7 +2,8 @@ package main
 
 import (
 	"fmt"
-	"math"
+
+	"github.com/priyendra/golang-euler/common"
 )
 
 func pow(a, b int) int {
@@ -20,20 +21,10 @@ func max(a, b int) int {
 	return b
 }
 
-func isPrime(n int) bool {
-	max := int(math.Sqrt(float64(n)))
-	for i := 2; i <= max; i++ {
-		if n%i == 0 {
-			return false
-		}
-	}
-	return true
-}
-
 func allPrimesUpTo(n int) []int {
 	answer := []int{2}
 	for i := 3; i <= n; i++ {
-		if isPrime(i) {
+		if common.IsPrime(i) {
 			answer = append(answer, i)
 		}
 	}
